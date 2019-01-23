@@ -60,7 +60,7 @@ customer3@client.com,971794000539123,Mohyiddine,Soltani,KW,2019-01-14T11:21,Purc
  
 #### Sensitive Data Columns
 
-Sometimes, the client does not with to disclose sensitive customer's data with us and instead provides us with already hashed data. In such a case, append `_hash` to the column name, e.g. `email_hash`, `phone_hash`, `country_hash`. These columns, however, cannot be hashed: `event_time`, `value`, `currency`, `event_name`.
+Sometimes, the client does not wish to disclose sensitive customer's data with us and instead provides us with already hashed data. In such a case, append `_hash` to the column name, e.g. `email_hash`, `phone_hash`, `country_hash`. These columns, however, cannot be hashed: `event_time`, `value`, `currency`, `event_name`.
 
 #### Extra Columns
 
