@@ -24,7 +24,7 @@ The adapter uploads data files to **FTP** or **SFTP** server. The FTP/SFTP serve
 
 ### File Format
 
-Each file uploaded to the FTP/SFTP server must be in **CSV** fromat and the CSV column separator must be the comma character (`,`). The file must also contain a single header with names of the columns and any number of data rows. There are mandatory columns and optional columns. The order of the columns is not important.
+Each file uploaded to the FTP/SFTP server must be in **CSV** fromat and the CSV column separator must be the comma character (`,`). The file must also contain a single header with names of the columns and any number of data rows. There are mandatory columns and optional columns. The order of the columns is not important. The mandatory columns must always be present, they must be non-empty for all rows and valid. The optional columns can be empty, validity is not essential and the columns can be missing from the file altogether.
 
 #### Mandatory columns
 
@@ -47,7 +47,7 @@ Each file uploaded to the FTP/SFTP server must be in **CSV** fromat and the CSV 
  * `state` - For US states, use [2-character ANSI abbreviation code](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code). For states outside US, use state name with no punctuation, no special characters, no white space.
  * `madid` - Mobile advertiser id.
  
-Usually, most of these columns will be not present or empty (because the client's data source does not have them), but at least either an `email` or `phone` must be present (otherwise the FB won't be able to match such events to real users).
+Usually, most of these columns will not be present or be empty (because the client's data source does not have them), but at least either an `email` or `phone` should be present (otherwise the FB won't be able to match such events to real users).
  
 Example of a CSV file in this format:
  
