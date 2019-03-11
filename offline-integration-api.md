@@ -36,7 +36,11 @@ Each file uploaded to the FTP/SFTP server must be in **CSV** fromat and the CSV 
 
  * `event_name` - Usually `Purchase` (used implicitely if `event_name` not present), but can be also `ViewContent`, `Search`, `AddToCart`, `AddToWishlist`, `InitiateCheckout`, `AddPaymentInfo`, `Lead`, `CompleteRegistration` or `Other`.
  * `email` - e.g. `customer@client.com`
+ * `email1` - e.g. `customer@client.com`
+ * `email2` - e.g. `customer@client.com`
  * `phone` - Phone number of the customer with no symbols, characters or leading zeros, e.g. `55081994960230`. If column `country` is not specified, should contain also country code number prefix (e.g. `420`).
+ * `phone1` - Phone number of the customer with no symbols, characters or leading zeros, e.g. `55081994960230`. If column `country` is not specified, should contain also country code number prefix (e.g. `420`).
+ * `phone2` - Phone number of the customer with no symbols, characters or leading zeros, e.g. `55081994960230`. If column `country` is not specified, should contain also country code number prefix (e.g. `420`).
  * `gender` - Customer's email, either `m` for male or `f` for female.
  * `date_of_birth` - Date of birth of the customer in `yyyy-MM-dd` format, e.g. `1991-10-05`.
  * `last_name` - Customer's last name, only one name.
