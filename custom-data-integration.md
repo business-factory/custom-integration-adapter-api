@@ -11,15 +11,17 @@ To match ROI hunter ad/adset/campaign data with custom data, the custom data nee
 
 If neither of those columns are available, some other options must be explored.
 
+Another requirement is *date*.
+
 ### Integration via FTP/SFTP
 
 The way this is done is via a cron that continously checks FTP/SFTP (can be created by either a third party or by us) for new or modified files. If there is a new or a modified file, the entire file is parsed, matched to our ROI hunter Ads and saved. Subsequently, the data is aggregated (if possible, some columns can't be aggregated) into upper layers (Adset, campaign). An example of such a file follows:
 
 ```
-fb_id,transactions,revenues,currency,views
-23489034809893,50,1000.0,USD,1000
-2533276472642387,66,1500.8,EUR,1294
-234238789891234,2348,8259853.78,USD,234890
+fb_id,date,transactions,revenues,currency,views
+23489034809893,2019-01-30,50,1000.0,USD,1000
+2533276472642387,2019-02-02,66,1500.8,EUR,1294
+234238789891234,2019-02-14,2348,8259853.78,USD,234890
 ```
 
 Note: The file can be also provided via HTTP.
